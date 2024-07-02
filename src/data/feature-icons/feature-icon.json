@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/img/icon-img/support-1.webp",
+    "title": "Leasing",
+    "subtitle": "Free shipping on all order"
+  },
+  {
+    "id": 2,
+    "image": "/assets/img/icon-img/support-2.webp",
+    "title": "Road Side Assistance",
+    "subtitle": "Free shipping on all order"
+  },
+  {
+    "id": 3,
+    "image": "/assets/img/icon-img/support-3.png",
+    "title": "Maintenance & Repair",
+    "subtitle": "Free shipping on all order"
+  },
+  {
+    "id": 4,
+    "image": "/assets/img/icon-img/support-4.webp",
+    "title": "Charging & Swapping",
+    "subtitle": "Free shipping on all order"
+  }
+]

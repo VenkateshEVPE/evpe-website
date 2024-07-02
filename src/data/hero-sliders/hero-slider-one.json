@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Ev Products",
+    "subtitle": "Creating a better future.",
+    "image": "/assets/img/slider/home_banner1.png",
+    "url": "/shop-grid-standard"
+  },
+  {
+    "id": 2,
+    "title": "Smart Products",
+    "subtitle": "Summer Offer 2024 Collection",
+    "image": "/assets/img/slider/single-slide-1.png",
+    "url": "/shop-grid-standard"
+  }
+]

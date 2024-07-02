@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/img/home/blog_thumbnail.png",
+     "url": "/blog-standard"
+  },
+  {
+    "id": 2,
+    "image": "/assets/img/home/faq_thumbnail.png",
+    "url": "/faq"
+  },
+  {
+    "id": 3,
+    "image": "/assets/img/home/leasing_thumbnail.png",    
+    "url": "/leasing"
+  }
+]

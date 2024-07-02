@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,   
+    "title": "Two Wheeler",
+    "subtitle": "Starting at",
+    "price": "95,100 /-",
+    "link": "/shop-grid-standard"
+  },
+  {
+    "id": 2,    
+    "title": "Three Wheeler",
+    "subtitle": "Starting at",
+    "price": "3,45,600 /-",
+    "link": "/shop-grid-standard"
+  },
+  {
+    "id": 3,  
+    "title": "Accessories",
+    "subtitle": "Starting at",
+    "price": "15,200 /-",
+    "link": "/shop-grid-standard"
+  }
+]

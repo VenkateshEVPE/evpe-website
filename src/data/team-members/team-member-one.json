@@ -1,0 +1,39 @@
+[
+  {
+    "id": "1",
+    "image": "/assets/img/team/team-1.jpg",
+    "fbLink": "//www.facebook.com",
+    "twitterLink": "//www.twitter.com",
+    "instagramLink": "//www.instagram.com",
+    "name": "Mr. Rohan Yeggina",
+    "position": "CEO"
+  },
+  {
+    "id": "2",
+    "image": "/assets/img/team/team-3.jpg",
+    "fbLink": "//www.facebook.com",
+    "twitterLink": "//www.twitter.com",
+    "instagramLink": "//www.instagram.com",
+    "name": "Mr.Suraj Penukonda",
+    "position": "co-founder"
+  },
+  {
+    "id": "3",
+    "image": "/assets/img/team/team-2.jpg",
+    "fbLink": "//www.facebook.com",
+    "twitterLink": "//www.twitter.com",
+    "instagramLink": "//www.instagram.com",
+    "name": "Mr.Rama Krishna Raju",
+    "position": "CTO"
+  },
+  {
+    "id": "4",
+    "image": "/assets/img/team/team-4.jpg",
+    "fbLink": "//www.facebook.com",
+    "twitterLink": "//www.twitter.com",
+    "instagramLink": "//www.instagram.com",
+    "name": "Mrs.Pravallika Rapaka",
+    "position": "Full stack developer"
+  }
+  
+]
