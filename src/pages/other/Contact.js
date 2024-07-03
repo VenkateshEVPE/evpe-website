@@ -5,8 +5,55 @@ import LayoutOne from "../../layouts/LayoutOne";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
 import GoogleMap from "../../components/google-map"
 
+import React, { useState } from 'react';
+import axios from 'axios';
+
+
 const Contact = () => {
   let { pathname } = useLocation();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    mobile: '',
+    subject: '',
+    message: ''
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(null);
+  const [successMessage, setSuccessMessage] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+
+    axios.post('http://192.168.0.143:4000/api/send-mail', formData)
+      .then(response => {
+        console.log('SUCCESS!', response.data);
+        setSuccessMessage('Your message has been sent successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          mobile: '',
+          subject: '',
+          message: ''
+        });
+      })
+      .catch(error => {
+        console.error('FAILED...', error);
+        setError('Failed to send message. Please try again later.');
+      })
+      .finally(() => {
+        setSubmitting(false);
+      });
+  };
 
   return (
     <Fragment>
@@ -99,34 +146,64 @@ const Contact = () => {
                   <div className="contact-title mb-30">
                     <h2>Get In Touch</h2>
                   </div>
-                  <form className="contact-form-style">
+                  <form className="contact-form-style" onSubmit={handleSubmit}>
                     <div className="row">
                       <div className="col-lg-6">
-                        <input name="name" placeholder="Name*" type="text" />
+                        <input
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          placeholder="Name*"
+                          type="text"
+                          required
+                        />
                       </div>
                       <div className="col-lg-6">
-                        <input name="email" placeholder="Email*" type="email" />
+                        <input
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          placeholder="Email*"
+                          type="email"
+                          required
+                        />
                       </div>
-                      <div className="col-lg-12">
+                      <div className="col-lg-6">
+                        <input
+                          name="mobile"
+                          value={formData.mobile}
+                          onChange={handleChange}
+                          placeholder="Mobile*"
+                          type="text"
+                          required
+                        />
+                      </div>
+                      <div className="col-lg-6">
                         <input
                           name="subject"
+                          value={formData.subject}
+                          onChange={handleChange}
                           placeholder="Subject*"
                           type="text"
+                          required
                         />
                       </div>
                       <div className="col-lg-12">
                         <textarea
                           name="message"
+                          value={formData.message}
+                          onChange={handleChange}
                           placeholder="Your Message*"
-                          defaultValue={""}
+                          required
                         />
-                        <button className="submit" type="submit">
-                          SEND
+                        <button className="submit" type="submit" disabled={submitting}>
+                          {submitting ? 'Sending...' : 'SEND'}
                         </button>
                       </div>
                     </div>
                   </form>
-                  <p className="form-message" />
+                  {error && <p style={{ color: 'red' }}>{error}</p>}
+                  {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
                 </div>
               </div>
             </div>
