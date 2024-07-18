@@ -14,6 +14,8 @@ import "./assets/scss/style.scss";
 import "./i18n";
 
 
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+
 store.dispatch(setProducts(products));
 
 const container = document.getElementById('root');
@@ -26,3 +28,6 @@ root.render(
     </Provider>
 );
 
+
+// Register the service worker
+serviceWorkerRegistration.register();

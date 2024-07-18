@@ -5,7 +5,7 @@ import blogs from "../../data/blogs.json";
 
 const BlogSidebar = () => {
   const { id } = useParams(); 
-  const blog = blogs.filter((b) => b.id != id); 
+  const blog = blogs.filter((b) => b.id !== id); 
   return (
     <div className="sidebar-style">
       {/* <div className="sidebar-widget">
