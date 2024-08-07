@@ -7,6 +7,7 @@ const HomeFashion = lazy(() => import("./pages/home/HomeFashion"));
 const Faq = lazy(() => import("./pages/other/Faq"));
 const Leasing = lazy(() => import("./pages/other/Leasing"));
 const Service = lazy(() => import("./pages/other/Service"));
+//template cmd : npx create-react-app my-app --template cra-template-pwa 
 
 // shop pages
 const ShopGridStandard = lazy(() => import("./pages/shop/ShopGridStandard"));
